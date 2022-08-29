@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Documentation Page</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>CSS</header>
+        <ul>
+            <li>
+                <a href="#Introduction" class="nav-link">Introduction</a>
+            </li>
+            <li>
+                <a href="#CSS_Syntax" class="nav-link">CSS Syntax</a>
+            </li>
+            <li>
+                <a href="#CSS_Responsive" class="nav-link">CSS Responsive</a>
+            </li>
+            <li>
+                <a href="#CSS_Grid" class="nav-link">CSS Grid</a>
+            </li>
+            <li>
+                <a href="#CSS_Examples" class="nav-link">CSS Examples</a>
+            </li>
+            <li>
+                <a href="#CSS_References" class="nav-link">CSS References</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a
+                    document written in a markup language such as HTML or XML (including XML dialects such as SVG,
+                    MathML or XHTML). CSS is a cornerstone technology of the World Wide Web, alongside HTML and
+                    JavaScript. </p>
+                <p>
+                    CSS is designed to enable the separation of presentation and content, including layout, colors, and
+                    fonts. This separation can improve content accessibility; provide more flexibility and control in
+                    the specification of presentation characteristics; enable multiple web pages to share formatting by
+                    specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the
+                    structural content; and enable the .css file to be cached to improve the page load speed between the
+                    pages that share the file and its formatting.</p>
+                <ul>
+                    <li>CSS stands for Cascading Style Sheets</li>
+                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                    <li>External stylesheets are stored in CSS files</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_Syntax">
+            <header>CSS Syntax</header>
+            <article>
+                <p>A CSS rule consists of a selector and a declaration block. The selector points to the HTML element
+                    you want to style.The declaration block contains one or more declarations separated by semicolons.
+                    Each declaration includes a CSS property name and a value, separated by a colon. Multiple CSS
+                    declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+                </p>
+                <code>
+                    p{
+                        color: red;
+                        text-align: center;
+                    }
+                </code>
+                <p>Example Explained:</p>
+                <ul>
+                    <li><span>p</span> is a selector in CSS (it points to the HTML element you want to style)</li>
+                    <li><span>color</span> is a property, and red is the property value</li>
+                    <li><span>text-align</span> is a property, and center is the property value</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_Responsive">
+            <header>CSS Responsive</header>
+            <article>
+                <p>Responsive web design makes your web page look good on all devices.
+                    Responsive web design uses only HTML and CSS, is not a program or a JavaScript.
+                </p>
+                <p>Web pages can be viewed using many different devices: desktops, tablets, and phones. Your web page
+                    should look good,and be easy to use, regardless of the device. Web pages should not leave out
+                    information to fit
+                    smaller devices, but rather adapt its content to fit any device: </p>
+                <p>Users are used to scroll websites vertically on both desktop and mobile devices - but not
+                    horizontally! So, if the user is forced to scroll horizontally, or zoom out, to see the whole web
+                    page it results in a poor user experience.
+                <p>HTML5 introduced a method to let web designers take control over the viewport, through the
+                    <span>meta</span> tag.
+                </p>
+                <p>You should include the following <span>meta</span> viewport element in all your web pages:</p>
+                <code>
+                    meta name="viewport" content="width=device-width, initial-scale=1.0"
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_Grid">
+            <header>CSS Grid</header>
+            <article>
+                <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier
+                    to design web pages without having to use floats and positioning.</p>
+                <p>A grid layout consists of a parent element, with one or more child elements.</p>
+                <code>
+                    .grid-container {
+                        display: grid;
+                      }
+                </code>
+                <code>
+                    .grid-container {
+                        display: inline-grid;
+                      }
+                </code>
+                <code>
+                    .grid-container {
+                        display: grid;
+                        column-gap: 50px;
+                      }
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_Examples">
+            <header>CSS Examples</header>
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias cupiditate magni mollitia dolor
+                    nemo accusantium, doloremque dolore atque alias ad excepturi vel, iure provident. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Perferendis blanditiis minima voluptates, impedit sed itaque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus commodi corporis
+                    facere nemo animi quisquam, sed vitae distinctio autem!
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quod atque ratione fuga eveniet ipsum
+                    corrupti molestias cumque excepturi doloremque. Perferendis harum nesciunt consequuntur deserunt
+                    eveniet ab eum rerum reprehenderit nulla assumenda debitis veniam alias omnis numquam, est, tenetur
+                    repudiandae ad ut? Beatae cupiditate numquam quia maiores eveniet suscipit. Illum, molestiae facere,
+                    pariatur nobis inventore consectetur perferendis quaerat deleniti cumque ratione nesciunt? Cum quas,
+                    sed incidunt eius quasi consequatur a?</p>
+            </article>
+        </section>
+        <section class="main-section" id="CSS_References">
+            <header>CSS References</header>
+            <article>
+                <p>All the documentation is taken from <a href="https://en.wikipedia.org/wiki/CSS"
+                        target="_blank">Wikipedia</a> and <a href="https://www.w3schools.com/css/default.asp"
+                        target="_blank">w3schools</a></p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
