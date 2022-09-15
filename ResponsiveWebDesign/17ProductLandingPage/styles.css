@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 1.5rem;
+    margin: 4.5rem auto;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.bottom-line {
+    height: 2px;
+    width: 10rem;
+    background-color: #ffbc00;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.lead {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Header */
+#header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 70px;
+    padding: 0 30px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo img {
+    height: 100%;
+}
+
+#nav-bar {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#nav-bar ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    padding: 10px 30px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link:hover {
+    background-color: cadetblue;
+    color: #fff;
+}
+
+/* Section A */
+#about_us {
+    margin-top: 95px;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.about-info i {
+    color: #ffbc00;
+    padding: 2rem;
+}
+
+.about-info p {
+    padding: 2rem 4rem;
+    font-size: 1.4rem;
+}
+
+.about-info h3 {
+    font-size: 1.5rem;
+}
+
+.info-1,
+.info-3 {
+    background-color: #f4f4f4;
+}
+
+.info-2 {
+    background-color: #ccc;
+}
+
+/* Section B */
+.video {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.video p {
+    background-color: #ccc;
+    padding: 3rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Section C */
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.item {
+    position: relative;
+    background-color: #ffbc00;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.item-text {
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* Secion D */
+.text-fields {
+    display: grid;
+    grid-template-areas: "name message""email message""phone message";
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+#name {
+    grid-area: name;
+}
+
+#email {
+    grid-area: email;
+}
+
+#phone {
+    grid-area: phone;
+}
+
+#message {
+    grid-area: message;
+}
+
+.text-fields .text-input {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    font-family: inherit;
+}
+
+#submit {
+    float: right;
+    margin-top: 1rem;
+    border: none;
+    padding: 1rem 2.2rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #333;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#submit:hover {
+    color: #333;
+    background-color: #ffbc00;
+}
+
+/* Footer */
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+    height: 75px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+#footer ul li {
+    padding: 0 3.5rem;
+}
+
+#footer a {
+    color: #fff;
+}
+
+#footer a:hover {
+    color: #ccc;
+}
+
+#footer p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 724px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .bottom-line {
+        width: 8rem;
+    }
+
+    .lead {
+        font-size: 1.4rem;
+    }
+
+    #header {
+        padding: 0 5px;
+    }
+
+    .logo {
+        height: 100%;
+    }
+
+    #nav-bar {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 10px 5px;
+    }
+
+    .about-info,
+    .video,
+    .items {
+        grid-template-columns: 1fr;
+    }
+
+    .text-fields {
+        grid-template-areas: "name""email""phone""message";
+    }
+
+    #submit {
+        display: inline-block;
+        width: 100%;
+        float: none;
+    }
+}
