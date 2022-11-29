@@ -1,70 +1,138 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
+  <body>
+    <main>
+      <div class="container">
+        <header id="header">
+          <h1 id="title">Survey Form</h1>
+          <p id="description">
+            Thank you for taking the time to take part in this survey!
+          </p>
+        </header>
 
-    <link rel="stylesheet" href="styles.css">
+        <form id="survey-form">
+          <fieldset>
+            <div class="info">
+              <label id="name-label" for="name">Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="info">
+              <label id="email-label" for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                required
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="info">
+              <label id="number-label" for="age"
+                >Age <span>(optional)</span></label
+              >
+              <input
+                id="age"
+                type="number"
+                min="16"
+                max="120"
+                placeholder="enter your age"
+              />
+            </div>
+          </fieldset>
 
-</head>
+          <fieldset>
+            <legend>How can you describe yourself?</legend>
+            <select>
+              <option value="">Select current role</option>
+              <option value="1">Pro</option>
+              <option value="2">Athlete</option>
+              <option value="3">Active person</option>
+              <option value="4">Couch potato</option>
+            </select>
+          </fieldset>
 
-<body>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Thank you for taking the time to take part in this survey!</p>
-    <form id="survey-form">
-        <fieldset>
-            <label id="name-label"> Name <input id="name" type="text" required placeholder="Enter your name">
-            </label>
-            <label id="email-label">Email <input id="email" type="email" required placeholder="Enter your email">
-            </label>
-            <label id="number-label">Age <span>(optional)</span> <input id="number" type="number" min="16" max="120"
-                    placeholder="enter your age"></label>
-        </fieldset>
-        <fieldset>
-            <label>How can you describe yourself?
-                <select>
-                    <option value="">Select current role</option>
-                    <option value="1">Pro</option>
-                    <option value="2">Athlete</option>
-                    <option value="3">Active person</option>
-                    <option value="4">Couch potato</option>
-                </select>
-            </label>
-        </fieldset>
-        <fieldset class="inline">
-            <label>How often do you play sports?
-                <label><input type="radio" name="recommend" class="inline" value="1" /> Every day</label>
-                <label><input type="radio" name="recommend" class="inline" value="2" /> Four times a week</label>
-                <label><input type="radio" name="recommend" class="inline" value="3" /> Twice a week</label>
-                <label><input type="radio" name="recommend" class="inline" value="4" /> Never!</label>
-            </label>
-        </fieldset>
-        <fieldset>
-            <label>What is your favorite out-door sport?
-                <select id="dropdown">
-                    <option value="">Select an option</option>
-                    <option value="1">Climbing</option>
-                    <option value="2">Canoe</option>
-                    <option value="2">Cycling</option>
-                    <option value="3">Skating</option>
-                </select>
-            </label>
-        </fieldset>
-        <fieldset>
-            <label>Where did you hear about us? <span>(Check all that apply)</span>
-                <label><input type="checkbox" value="1" /> Friends</label>
-                <label><input type="checkbox" value="2" /> Facebook</label>
-                <label><input type="checkbox" value="3" /> Instagram</label>
-                <label><input type="checkbox" value="4" /> Twitter</label>
-                <label><input type="checkbox" value="5" /> Others</label>
-            </label>
-        </fieldset>
-        <fieldset>
-            <label>Please tell us something about yourself:
-                <textarea name="bio" rows="3" cols="30" placeholder="I love climbing..."></textarea>
-            </label>
-        </fieldset>
-        <input type="submit" value="Submit" id="submit" />
-    </form>
-</body>
+          <fieldset>
+            <legend>How often do you play sports?</legend>
+            <div class="selects">
+              <input type="radio" name="recommend" value="1" id="every" />
+              <label for="every" class="inline">Every day</label>
+            </div>
+            <div class="selects">
+              <input type="radio" name="recommend" value="2" id="four" />
+              <label for="four" class="inline">Four times a week</label>
+            </div>
+            <div class="selects">
+              <input type="radio" name="recommend" value="3" id="twice" />
+              <label for="twice" class="inline">Twice a week</label>
+            </div>
+            <div class="selects">
+              <input type="radio" name="recommend" value="4" id="never" />
+              <label for="never" class="inline">Never!</label>
+            </div>
+          </fieldset>
 
+          <fieldset>
+            <legend>What is your favorite out-door sport?</legend>
+            <select id="dropdown">
+              <option value="">Select an option</option>
+              <option value="1">Climbing</option>
+              <option value="2">Canoe</option>
+              <option value="2">Cycling</option>
+              <option value="3">Skating</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              Where did you hear about us? <span>(Check all that apply)</span>
+            </legend>
+            <div class="selects">
+              <input type="checkbox" value="1" id="friends" />
+              <label for="friends" class="inline">Friends</label>
+            </div>
+            <div class="selects">
+              <input type="checkbox" value="2" id="facebook" />
+              <label for="facebook" class="inline">Facebook</label>
+            </div>
+            <div class="selects">
+              <input type="checkbox" value="3" id="instagram" />
+              <label for="instagram" class="inline">Instagram</label>
+            </div>
+            <div class="selects">
+              <input type="checkbox" value="4" id="twitter" />
+              <label for="twitter" class="inline">Twitter</label>
+            </div>
+            <div class="selects">
+              <input type="checkbox" value="5" id="others" />
+              <label for="others" class="inline">Others</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Please tell us something about yourself:</legend>
+            <textarea
+              name="bio"
+              rows="3"
+              cols="30"
+              placeholder="I love climbing..."
+            ></textarea>
+          </fieldset>
+
+          <input type="submit" value="Submit" id="submit" />
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
